@@ -1,0 +1,1 @@
+The analytic solution (symbolic solution) of the fixed solution of the first-order non-homogeneous linear differential equations with constant coefficients using the Jordan standard decomposition of the matrix exponential function.

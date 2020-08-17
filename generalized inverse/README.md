@@ -17,3 +17,4 @@ If it is inconsistent linear equations , it could give the least square solution
 Case 2 is aiming to give particular solution.
 If it is Reconcilable linear equations , it could provide the Minimum Norm Solution by 5.
 If it is inconsistent linear equations , it could provide the minimal norm least squares solution  by 6.
+In addition: because of my poor matlab experience, the quantities of free variable(z1,z2...zn) need to be consisent with the dimension of A-*A.You need to add the free variable manually in 7 before run it.

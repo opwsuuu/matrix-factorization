@@ -1,19 +1,39 @@
 function [a]=formula(b,c,d)
 
 [m,n]=size(b);
-l=max(m,n);
+l=n;
 switch d
     case 1
         if rank(b)==rank([b,c])
-            syms z1 z2 z3;
-            z=[z1;z2;z3];
+            
+            syms z;
+           
+           
+           
+           z=cell(l,1);
+             for o=1:l
+               z{o,1}=['z',num2str(o)];
+             end
+           
+             t=sym(z);
+               
+          
+            
             [p,q]=size(Arjian(b));
-            a= Arjian(b)*c+(eye(p,n)-Arjian(b)*b)*z;
+            a= Arjian(b)*c+(eye(p,n)-Arjian(b)*b)*t;
         else
-          syms z1 z2 z3;
-            z=[z1;z2];    
+          syms z;
+           
+           
+           
+           z=cell(l,1);
+             for o=1:l
+               z{o,1}=['z',num2str(o)];
+             end
+           
+             t=sym(z);   
              [p,q]=size(Aljian(b,1));
-            a= Aljian(b,1)*c+(eye(p,n)-Aljian(b,1)*b)*z;
+            a= Aljian(b,1)*c+(eye(p,n)-Aljian(b,1)*b)*t;
         end
         
     case 2
